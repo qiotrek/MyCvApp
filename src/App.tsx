@@ -5,7 +5,7 @@ import { useEffect, useState } from 'react';
 import { Turn as Hamburger } from 'hamburger-react'
 import { Badge, Card, Carousel, Footer, Timeline } from 'flowbite-react';
 import myPhoto from './assets/myPhoto.jpg';
-import { HiCheck, HiArrowCircleUp,HiMinusCircle,HiArrowNarrowRight } from 'react-icons/hi';
+import { HiCheck, HiArrowCircleUp,HiMinusCircle,HiArrowNarrowRight,HiDocument } from 'react-icons/hi';
 
 
 function App() {
@@ -76,7 +76,7 @@ function App() {
                     <span className='text-[#111d42]'>Hej! Mam na imię</span> <span className='text-red-500'>Piotrek</span>
                     </h5>
                     <p className="font-normal  text-gray-300 dark:text-gray-400">
-                      Mam 25 lat i aktualnie pracuję jako <span className='text-red-500'>Full-Stack Developer</span>. Ostatnio najwięcej czasu poświęcam na programowanie <span className='text-red-500'> Aplikacji Webowych</span>.
+                      Mam 26 lat i aktualnie pracuję jako <span className='text-red-500'>Full-Stack Developer</span>. Ostatnio najwięcej czasu poświęcam na programowanie <span className='text-red-500'> Aplikacji Webowych</span>.
                     </p>
                   </Card>
                   <Card className="h-[100%] w-[60%] bg-slate-600 dark:bg-slate-700 flex">
@@ -92,8 +92,11 @@ function App() {
                     <span className='text-[#111d42]'>Moje Zainteresowania!</span>
                     </h5>
                     <p className="font-normal  text-gray-300 dark:text-gray-400">
-                    
+                      W wolnym czasie lubię uprawiać <span className='text-red-500'>sport</span>(siłownia,bieganie,tenis ziemny). Ostatnio przygotowuję się również do 5-tki Warszawskiej. W przyszłosci chciałbym oblecieć i <span className='text-red-500'>zwiedzić całą ziemię</span>. W wolnym czasie lubię <span className='text-red-500'>pograć</span> w gry lub odpalić dobry kryminał.
                     </p>
+                  </Card>
+                  <Card className="h-[100%] w-[60%] bg-slate-600 dark:bg-slate-700 flex">
+                  <iframe className="border-radius:12px" src="https://open.spotify.com/embed/track/23S56j5Ct9eCT2ZQ0h2djm?utm_source=generator" width="100%" height="352" frameBorder="0"  allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                   </Card>
                 </Carousel>
               </div>
@@ -171,13 +174,12 @@ function App() {
             <div className='flex flex-col overflow-y-scroll no-scrollbar p-2'>
               <Timeline>
                   <Timeline.Item>
-                    <Timeline.Point />
+                    <Timeline.Point icon={HiDocument} />
                     <Timeline.Content>
-                      <Timeline.Time className='text-red-500'>February 2022</Timeline.Time>
-                      <Timeline.Title className='text-[#2e50cae1]'>Application UI code in Tailwind CSS</Timeline.Title>
+                      <Timeline.Time className='text-red-500'>Marzec 2019</Timeline.Time>
+                      <Timeline.Title className='text-[#2e50cae1]'>Starszy konsultant Virgin Mobile</Timeline.Title>
                       <Timeline.Body>
-                        Get access to over 20+ pages including a dashboard layout, charts, kanban board, calendar, and pre-order
-                        E-commerce & Marketing pages.
+                       Obsługa i rozwiązywanie zgłoszeń technicznych klientów.
                       </Timeline.Body>
                       <button color="gray">
                         Learn More
@@ -188,8 +190,8 @@ function App() {
                   <Timeline.Item>
                     <Timeline.Point />
                     <Timeline.Content>
-                      <Timeline.Time className='text-red-500'>March 2022</Timeline.Time>
-                      <Timeline.Title className='text-[#2e50cae1]'>Marketing UI design in Figma</Timeline.Title>
+                      <Timeline.Time className='text-red-500'>Sierpień 2021</Timeline.Time>
+                      <Timeline.Title className='text-[#2e50cae1]'>Junior Web Developer</Timeline.Title>
                       <Timeline.Body>
                         All of the pages and components are first designed in Figma and we keep a parity between the two versions
                         even as we update the project.
@@ -256,6 +258,7 @@ function App() {
                     <span className='text-red-500 font-bold'>667897546</span>
                   }
                 </div>
+                
               </div>
           </div>
       
