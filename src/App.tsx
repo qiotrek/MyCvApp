@@ -65,7 +65,7 @@ function App() {
         {/* ABOUT */}   
         <div id='aboutMe' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-30 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
             <div className={`flex flex-col  gap-3 bg-[#111d42] m-8 p-5 w-[90%] h-96 max-h-80 min-h-44 shadow-2xl border-solid rounded-2xl max-md:w-[70%] max-md:mx-auto max-md:my-8 max-md:h-56`}> 
-                <h1 className="dictionaryText size-auto font-bold mibold text-center text-zinc-500">O Mnie</h1>
+                <h1 className="dictionaryText text-xl size-auto font-bold text-center text-zinc-500 tracking-wider">O Mnie</h1>
               <div className="border-t border-gray-500 items-center"></div>
               
               <div className="h-[100%] sm:h-64 xl:h-80 2xl:h-96">
@@ -106,7 +106,7 @@ function App() {
         {/* MOJE UMIEJĘTNOŚCI */}   
         <div id='mySkills' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-28 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
             <div className={`flex flex-col  gap-3 bg-[#111d42] m-8 p-5 w-[90%] h-96 max-h-80 min-h-44 shadow-2xl border-solid rounded-2xl max-md:w-[70%] max-md:mx-auto max-md:my-8 max-md:h-56`}> 
-                <h1 className="dictionaryText size-auto font-bold mibold text-center text-zinc-500">Moje Umiejętności</h1>
+                <h1 className="dictionaryText text-xl size-auto font-bold text-center text-zinc-500 tracking-wider">Moje Umiejętności</h1>
               <div className="border-t border-gray-500 items-center"></div>
               <Carousel indicators={false}>
                 <div className="h-[100%] w-[70%]  flex">
@@ -168,7 +168,7 @@ function App() {
         {/* DOŚWIADCZENIE ZAWODOWE */}
         <div id='myExperience' className="flex relative z-5 min-h-[70vh] flex-row my-40 mt-4 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-6 border-solid border-black border-opacity-5 justify-center items-center max-md:flex-col">
           <div className="flex flex-col gap-5 bg-[#111d42] m-6 p-6 w-full max-w-4xl shadow-2xl rounded-3xl border border-white/10">
-            <h1 className="text-xl font-bold text-center text-white tracking-wider">Doświadczenie Zawodowe</h1>
+            <h1 className="dictionaryText text-xl size-auto font-bold text-center text-zinc-500 tracking-wider">Doświadczenie Zawodowe</h1>
             <div className="border-t border-gray-600 w-full mb-2"></div>
 
             {/* Kontener z przewijaniem */}
@@ -235,7 +235,7 @@ function App() {
       {/* KONTAKT */}
       <div id='contactCard' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-30 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center items-center max-md:flex-col">
         <div className={`flex flex-col gap-3 bg-[#111d42] m-8 p-5 w-full max-w-5xl min-h-[350px] shadow-2xl border-solid rounded-2xl mx-4`}> 
-          <h1 className="dictionaryText size-auto font-bold text-center text-zinc-500 text-2xl">Kontakt</h1>
+          <h1 className="dictionaryText size-auto font-bold text-center text-zinc-500 text-xl">Kontakt</h1>
           <div className="border-t border-gray-500 mb-8"></div>
 
           <div className='flex flex-row flex-wrap md:flex-nowrap mx-auto gap-12 md:gap-16 items-start justify-center w-full'>
