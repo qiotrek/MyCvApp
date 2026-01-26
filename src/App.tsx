@@ -1,6 +1,5 @@
 import DownloadCVHook from './Hooks/CVDownload';
 import LanguageChangeHook from './Hooks/LanguageChange';
-import './App.css';
 import { useEffect, useState } from 'react';
 import { Turn as Hamburger } from 'hamburger-react'
 import { Badge, Card, Carousel, Footer, Timeline } from 'flowbite-react';
@@ -11,7 +10,7 @@ import { HiCheck, HiArrowCircleUp,HiMinusCircle,HiArrowNarrowRight,HiDocument } 
 function App() {
   
   useEffect(() => {
-    //handleClickScroll("aboutMe");
+    handleClickScroll("aboutMe");
   }, []); 
   
   let texts:  Record<string, string> = {};
@@ -20,18 +19,18 @@ function App() {
   const [isEmailHovered, setEmailHovered] = useState(false);
   const [isLinkedinHovered, setLinkedinHovered] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
-  const [isOpen, setOpen] = useState(false)
-    const textsContent = localStorage.getItem('textsContent');
+  const [isOpen, setOpen] = useState(false);
+  const textsContent = localStorage.getItem('textsContent');
 
-    if (textsContent) {
-      texts= JSON.parse(textsContent);
-    } 
-    const handleClickScroll = (id:string) => {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth',block:'center' });
-      }
-    };
+  if (textsContent) {
+    texts= JSON.parse(textsContent);
+  } 
+  const handleClickScroll = (id:string) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ block:'center' });
+    }
+  };
   return (
     // <div className="flex flex-col overflow-hidden bg-fixed" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bg.jpg)` }}>
     <div className="flex flex-col overflow-hidden bg-fixed bg-slate-800" >
@@ -64,7 +63,7 @@ function App() {
       
       <div id="bg" className="min-h-screen gap-64 relative top-14 items-center bg-cover justify-center " >
         {/* ABOUT */}   
-        <div id='aboutMe' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-28 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
+        <div id='aboutMe' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-30 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
             <div className={`flex flex-col  gap-3 bg-[#111d42] m-8 p-5 w-[90%] h-96 max-h-80 min-h-44 shadow-2xl border-solid rounded-2xl max-md:w-[70%] max-md:mx-auto max-md:my-8 max-md:h-56`}> 
                 <h1 className="dictionaryText size-auto font-bold mibold text-center text-zinc-500">O Mnie</h1>
               <div className="border-t border-gray-500 items-center"></div>
@@ -166,106 +165,139 @@ function App() {
             
         </div>
 
-        {/* DOŚWIACZENIE ZAWODOWE */}   
-        <div id='myExperience' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-28 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
-          <div className={`flex flex-col  gap-3 bg-[#111d42] m-8 p-5 w-[90%] h-96 max-h-80 min-h-44 shadow-2xl border-solid rounded-2xl max-md:w-[70%] max-md:mx-auto max-md:my-8 max-md:h-56`}> 
-            <h1 className="dictionaryText size-auto font-bold mibold text-center text-zinc-500">Doświadczenie Zawodowe</h1>
-            <div className="border-t border-gray-500 items-center"></div>
-            <div className='flex flex-col overflow-y-scroll no-scrollbar p-2'>
-              <Timeline>
-                  <Timeline.Item>
-                    <Timeline.Point icon={HiDocument} />
-                    <Timeline.Content>
-                      <Timeline.Time className='text-red-500'>Marzec 2019</Timeline.Time>
-                      <Timeline.Title className='text-[#2e50cae1]'>Starszy konsultant Virgin Mobile</Timeline.Title>
-                      <Timeline.Body>
-                       Obsługa i rozwiązywanie zgłoszeń technicznych klientów.
-                      </Timeline.Body>
-                      <button color="gray">
-                        Learn More
-                        <HiArrowNarrowRight className="ml-2 h-3 w-3" />
-                      </button>
-                    </Timeline.Content>
-                  </Timeline.Item>
-                  <Timeline.Item>
-                    <Timeline.Point />
-                    <Timeline.Content>
-                      <Timeline.Time className='text-red-500'>Sierpień 2021</Timeline.Time>
-                      <Timeline.Title className='text-[#2e50cae1]'>Junior Web Developer</Timeline.Title>
-                      <Timeline.Body>
-                        All of the pages and components are first designed in Figma and we keep a parity between the two versions
-                        even as we update the project.
-                      </Timeline.Body>
-                    </Timeline.Content>
-                  </Timeline.Item>
-                  <Timeline.Item>
-                    <Timeline.Point />
-                    <Timeline.Content>
-                      <Timeline.Time className='text-red-500'>April 2022</Timeline.Time>
-                      <Timeline.Title className='text-[#2e50cae1]'>E-Commerce UI code in Tailwind CSS</Timeline.Title>
-                      <Timeline.Body>
-                        Get started with dozens of web components and interactive elements built on top of Tailwind CSS.
-                      </Timeline.Body>
-                    </Timeline.Content>
-                  </Timeline.Item>
-                </Timeline>
-              </div>
+        {/* DOŚWIADCZENIE ZAWODOWE */}
+        <div id='myExperience' className="flex relative z-5 min-h-[70vh] flex-row my-40 mt-4 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-6 border-solid border-black border-opacity-5 justify-center items-center max-md:flex-col">
+          <div className="flex flex-col gap-5 bg-[#111d42] m-6 p-6 w-full max-w-4xl shadow-2xl rounded-3xl border border-white/10">
+            <h1 className="text-xl font-bold text-center text-white tracking-wider">Doświadczenie Zawodowe</h1>
+            <div className="border-t border-gray-600 w-full mb-2"></div>
+
+            {/* Kontener z przewijaniem */}
+            <div className='flex flex-col overflow-y-auto max-h-[500px] pr-2 pl-8 pt-5 no-scrollbar'>
+            <Timeline>
+              {/* Najnowsze: Kwiecień 2022 */}
+              <Timeline.Item>
+                {/* Dodatkowo warto upewnić się, że Point ma swoje miejsce */}
+                <Timeline.Point icon={HiCheck} className="bg-red-500 text-white" />
+                <Timeline.Content>
+                  <Timeline.Time className='text-red-400 font-bold text-lg'>Kwiecień 2022 - Obecnie</Timeline.Time>
+                  <Timeline.Title className='text-white text-xl font-semibold mt-1'>
+                    E-Commerce UI Developer <span className="text-gray-400 text-sm font-normal">| Tailwind CSS Expert</span>
+                  </Timeline.Title>
+                  <Timeline.Body className="text-gray-300 mt-2 leading-relaxed">
+                    Projektowanie i wdrażanie dziesiątek komponentów webowych oraz interaktywnych elementów opartych na Tailwind CSS.
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+              <Timeline.Item>
+                <Timeline.Point icon={HiDocument} />
+                <Timeline.Content>
+                  <Timeline.Time className='text-red-400 font-bold text-lg'>Sierpień 2021 - Marzec 2022</Timeline.Time>
+                  <Timeline.Title className='text-white text-xl font-semibold mt-1'>
+                    Junior Web Developer
+                  </Timeline.Title>
+                  <Timeline.Body className="text-gray-300 mt-2 leading-relaxed">
+                    Praca nad pełnym cyklem życia produktu – od projektów w Figma po gotowy kod. Utrzymywanie spójności wizualnej między makietami a finalną wersją aplikacji.
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Point icon={HiDocument} />
+                <Timeline.Content>
+                  <Timeline.Time className='text-red-400 font-bold text-lg'>Marzec 2019 - Lipiec 2021</Timeline.Time>
+                  <Timeline.Title className='text-white text-xl font-semibold mt-1'>
+                    Starszy Konsultant Virgin Mobile
+                  </Timeline.Title>
+                  <Timeline.Body className="text-gray-300 mt-2 leading-relaxed">
+                    Profesjonalna obsługa i techniczne rozwiązywanie złożonych zgłoszeń klientów. Rozwój umiejętności komunikacyjnych i analitycznego myślenia pod presją czasu.
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+
+              <Timeline.Item>
+                <Timeline.Point icon={HiDocument} />
+                <Timeline.Content>
+                  <Timeline.Time className='text-red-400 font-bold text-lg'>Marzec 2019 - Lipiec 2021</Timeline.Time>
+                  <Timeline.Title className='text-white text-xl font-semibold mt-1'>
+                    Starszy Konsultant Virgin Mobile
+                  </Timeline.Title>
+                  <Timeline.Body className="text-gray-300 mt-2 leading-relaxed">
+                    Profesjonalna obsługa i techniczne rozwiązywanie złożonych zgłoszeń klientów. Rozwój umiejętności komunikacyjnych i analitycznego myślenia pod presją czasu.
+                  </Timeline.Body>
+                </Timeline.Content>
+              </Timeline.Item>
+            </Timeline>
           </div>
         </div>
+      </div>
 
 
-        {/* KONTAKT */}     
-        <div id='contactCard' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-28 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center content-center max-md:flex-col max-md:gap-3 ">
-          <div className={`flex flex-col gap-3 bg-[#111d42] m-8 p-5 w-[80%] h-72 max-h-80 min-h-44 shadow-2xl border-solid rounded-2xl max-md:w-[70%] max-md:mx-auto max-md:my-8 max-md:h-56`}> 
-              <h1 className="dictionaryText size-auto font-bold mibold text-center text-zinc-500">Kontakt</h1>
-              <div className="border-t border-gray-500 items-center"></div>
-              <div className='flex flex-row mx-auto gap-20 items-center justify-center'>
-                <div id="linkedin" className='w-[30%] p-5 grow text-center'>
-                  <div className=' max-h-32 max-w-32  flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer hover:opacity-70'
-                  onClick={()=>setLinkedinHovered(!isLinkedinHovered)}>
-                    <img className=' rounded-full  object-fill  w-[100%] h-[100%]'  alt="Linkedin icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linkedin_circle.svg/512px-Linkedin_circle.svg.png"></img>
-                  </div>
-                  {  !isLinkedinHovered &&         
-                    <span className='text-red-500 font-bold'>Linkedin</span>
-                  }
-                  {  isLinkedinHovered &&         
-                    <span className='text-red-500 font-bold'><a href='https://www.linkedin.com/in/piotr-płaziński-2178a917b/' target='_blank' rel="noopener noreferrer">Przejdź do profilu</a></span>
-                  }
-                </div>
-                <div id="mail" className='w-[30%] p-5 grow text-center'>
-                <div className='max-h-32 max-w-32 flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer hover:opacity-70'
-                 onClick={()=>setEmailHovered(!isEmailHovered)}>
-                  <img className=' object-cover-full rounded-full  w-[100%] h-[100%] ' alt="Gmail icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Deus_Gmail.png/512px-Deus_Gmail.png"></img>
-                  </div>
-                  <span className='text-red-500 font-bold'>
-                  {  !isEmailHovered &&         
-                    <span className='text-red-500 font-bold'>E-Mail</span>
-                  }
-                  {  isEmailHovered &&         
-                    <span className='text-red-500 font-bold'>piotrplazinski@gmail.com</span>
-                  }
-                  </span>
-                </div>
-                <div id="phone" className='w-[30%] p-5 grow text-center'>
-                  <div className='max-h-32 max-w-32  flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer hover:opacity-70'
-                    onClick={()=>setPhoneHovered(!isPhoneHovered)}>
-                    <img className='object-cover rounded-full w-[100%] h-[100%] ' alt="Pictograms-nps-emergency telephone-2" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pictograms-nps-emergency_telephone-2.svg/64px-Pictograms-nps-emergency_telephone-2.svg.png"></img>
-                  </div>
-                  {  !isPhoneHovered &&         
-                    <span className='text-red-500 font-bold'>Telefon</span>
-                  }
-                  {  isPhoneHovered &&         
-                    <span className='text-red-500 font-bold'>667897546</span>
-                  }
-                </div>
-                
+      {/* KONTAKT */}
+      <div id='contactCard' className="flex relative z-5 max-h-[90%] min-h-[60%] flex-row my-96 mt-30 bg-[#213b9be1] shadow-[0px_0px_50px_#f8c78f] border-8 border-solid border-black border-opacity-5 gap-10 justify-center items-center max-md:flex-col">
+        <div className={`flex flex-col gap-3 bg-[#111d42] m-8 p-5 w-full max-w-5xl min-h-[350px] shadow-2xl border-solid rounded-2xl mx-4`}> 
+          <h1 className="dictionaryText size-auto font-bold text-center text-zinc-500 text-2xl">Kontakt</h1>
+          <div className="border-t border-gray-500 mb-8"></div>
+
+          <div className='flex flex-row flex-wrap md:flex-nowrap mx-auto gap-12 md:gap-16 items-start justify-center w-full'>
+            
+            {/* Linkedin */}
+            <div className='flex flex-col items-center w-48'>
+              <div 
+                className='w-28 h-28 md:w-32 md:h-32 flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer 
+                          transition-all duration-300 ease-in-out transform hover:scale-110 
+                          hover:shadow-[0_0_25px_#fcbb71] bg-white overflow-hidden mb-4
+                          motion-safe:animate-[pulse_3s_infinite]'
+                onClick={() => setLinkedinHovered(!isLinkedinHovered)}
+              >
+                <img className='w-full h-full object-cover' alt="Linkedin icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ce/Linkedin_circle.svg/512px-Linkedin_circle.svg.png" />
               </div>
+              <div className="h-14 flex items-center justify-center text-center">
+                <span className='text-red-500 font-bold'>
+                  {!isLinkedinHovered ? "Linkedin" : <a href='https://www.linkedin.com/in/piotr-płaziński-2178a917b/' target='_blank' rel="noopener noreferrer" className="underline decoration-dotted">Przejdź do profilu</a>}
+                </span>
+              </div>
+            </div>
+
+            {/* Mail */}
+            <div className='flex flex-col items-center w-64'>
+              <div 
+                className='w-28 h-28 md:w-32 md:h-32 flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer 
+                          transition-all duration-300 ease-in-out transform hover:scale-110 
+                          hover:shadow-[0_0_25px_#fcbb71] bg-white overflow-hidden mb-4
+                          motion-safe:animate-[pulse_3s_infinite]'
+                onClick={() => setEmailHovered(!isEmailHovered)}
+              >
+                <img className='w-[75%] h-[75%] object-contain' alt="Gmail icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/f7/Deus_Gmail.png/512px-Deus_Gmail.png" />
+              </div>
+              <div className="h-14 flex items-center justify-center text-center">
+                <span className='text-red-500 font-bold whitespace-nowrap'>
+                  {!isEmailHovered ? "E-Mail" : "piotrplazinski@gmail.com"}
+                </span>
+              </div>
+            </div>
+
+            {/* Telefon */}
+            <div className='flex flex-col items-center w-48'>
+              <div 
+                className='w-28 h-28 md:w-32 md:h-32 flex justify-center border-4 border-[#fcbb71] rounded-full items-center cursor-pointer 
+                          transition-all duration-300 ease-in-out transform hover:scale-110 
+                          hover:shadow-[0_0_25px_#fcbb71] bg-white overflow-hidden mb-4
+                          motion-safe:animate-[pulse_3s_infinite]'
+                onClick={() => setPhoneHovered(!isPhoneHovered)}
+              >
+                <img className='w-full h-full object-cover scale-110' alt="Phone icon" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/db/Pictograms-nps-emergency_telephone-2.svg/64px-Pictograms-nps-emergency_telephone-2.svg.png" />
+              </div>
+              <div className="h-14 flex items-center justify-center text-center">
+                <span className='text-red-500 font-bold whitespace-nowrap'>
+                  {!isPhoneHovered ? "Telefon" : "667 897 546"}
+                </span>
+              </div>
+            </div>
+
           </div>
-      
         </div>
-       
+      </div>
       
-       
 
       
         
