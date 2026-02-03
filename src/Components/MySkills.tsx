@@ -44,9 +44,12 @@ const MySkills: React.FC<MySkillsProps> = ({ texts }) => {
                             <Badge size="l" color="success" icon={HiCheck}>.NET Core</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>.NET Framework</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>Entity Framework</Badge>
+                            <Badge size="l" color="success" icon={HiCheck}>LINQ</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>REST API</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>FIRESTORE</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>SQL</Badge>
+                            <Badge size="l" color="success" icon={HiCheck}>Clean Architecture</Badge>
+                            <Badge size="l" color="success" icon={HiCheck}>JWT Auth</Badge>
                         </div>
                         <div className='m-auto w-[50%] flex items-center justify-center'>
                             <p className='text-5xl font-bold'>
@@ -61,9 +64,10 @@ const MySkills: React.FC<MySkillsProps> = ({ texts }) => {
                     <div className="h-[100%] w-[70%] flex">
                         <div className='m-auto flex flex-wrap w-[50%] gap-1'>
                             <Badge size="l" color="success" icon={HiCheck}>GIT</Badge>
-                            <Badge size="l" color="purple" icon={HiArrowCircleUp}>GCP</Badge>
+                            <Badge size="l" color="purple" icon={HiCheck}>GCP</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>AppSheet</Badge>
                             <Badge size="l" color="purple" icon={HiArrowCircleUp}>Google Script</Badge>
+                            <Badge size="l" color="purple" icon={HiArrowCircleUp}>Docker / Terraform</Badge>
                         </div>
                         <div className='m-auto w-[50%] flex items-center justify-center'>
                             <p className='text-5xl font-bold'>
