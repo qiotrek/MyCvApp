@@ -36,7 +36,22 @@
             "ProjectInfoWhyTitle": "DLACZEGO?",
             "ProjectInfoWhyText": "Na początku projekt tworzyłem dla własnego rozwinięcia umiejętności w zakresie React'a, natomiast z czasem zacząłem przeobrażać to w moją własną wizytówkę.",
             "ProjectInfoHowMuchTitle": "ILE?",
-            "ProjectInfoHowMuchText": "Całkowita praca nad projektem zajęła mi.."
+            "ProjectInfoHowMuchText": "Całkowita praca nad projektem zajęła mi..",
+            "Exp_Title": "Doświadczenie Zawodowe",
+            "Exp_Present": "Obecnie",
+            "Exp_WebDev_Title": "Web Developer",
+            "Exp_WebDev_Company": "Auchan Retail Polska",
+            "Exp_WebDev_Desc1": "Przepisanie aplikacji na skanery sklepowe z Flutter na React — zoptymalizowało to czas reakcji urządzenia i umożliwiło dalszy rozwój projektu o kolejne moduły.",
+            "Exp_WebDev_Desc2": "Utworzenie aplikacji do zarządzania spedycją kontenerów — umożliwiła ona pracę na spójnym systemie zamiast dotychczasowego rozwiązania opartego na plikach Excel.",
+            "Exp_WebDev_Desc3": "Realizacja różnorodnych systemów: od aplikacji kupna/sprzedaży akcji wewnętrznych, przez systemy zarządzania dokumentami, po konektory danych i API (User Management).",
+            "Exp_Freelance_Title": "Fullstack Developer (Projekt Zespołowy)",
+            "Exp_Freelance_Desc": "Stworzenie aplikacji webowej dla prywatnego klienta do zarządzania społecznościami (członkowie, spotkania, system plików, wewnętrzne głosowania).",
+            "Exp_Junior_Title": "Junior Web Developer",
+            "Exp_Junior_Desc1": "Lokalizacja aplikacji do zarządzania promocjami sklepowymi — wprowadzenie pełnej obsługi wielu języków.",
+            "Exp_Junior_Desc2": "Awans na stanowisko regulara dzięki wzrostowi umiejętności; zwiększenie decyzyjności w doborze technologii i aktywny udział w spotkaniach biznesowych.",
+            "Exp_SeniorConsultant_Title": "Senior Consultant",
+            "Exp_SeniorConsultant_Company": "Virgin Mobile",
+            "Exp_SeniorConsultant_Desc": "Nabycie umiejętności negocjacyjnych, aktywnego słuchania potrzeb klienta oraz technicznego rozwiązywania złożonych zgłoszeń pod presją czasu."
         },
         "gb": {
             "AboutMe": "About me",
@@ -74,7 +89,22 @@
             "ProjectInfoWhyTitle": "WHY?",
             "ProjectInfoWhyText": "At the beginning, I created the project to develop my React skills, but over time I started to turn it into my own business card.",
             "ProjectInfoHowMuchTitle": "HOW MUCH?",
-            "ProjectInfoHowMuchText": "The entire project took me..."
+            "ProjectInfoHowMuchText": "The entire project took me...",
+            "Exp_Title": "Professional Experience",
+            "Exp_Present": "Present",
+            "Exp_WebDev_Title": "Web Developer",
+            "Exp_WebDev_Company": "Auchan Retail Polska",
+            "Exp_WebDev_Desc1": "Rewrote store scanner applications from Flutter to React — optimized device response time and enabled project scaling with new modules.",
+            "Exp_WebDev_Desc2": "Developed a container shipping management app — unified the workflow into a single system, replacing legacy Excel-based processes.",
+            "Exp_WebDev_Desc3": "Developed various systems: internal stock trading apps, document management, data connectors, and User Management APIs.",
+            "Exp_Freelance_Title": "Fullstack Developer (Team Project)",
+            "Exp_Freelance_Desc": "Developed a community management web app for a private client (member management, meetings, file systems, and internal voting).",
+            "Exp_Junior_Title": "Junior Web Developer",
+            "Exp_Junior_Desc1": "Localization of a store promotion management app — implemented full multi-language support.",
+            "Exp_Junior_Desc2": "Promoted to regular developer; gained autonomy in code architecture and increased involvement in business requirement meetings.",
+            "Exp_SeniorConsultant_Title": "Senior Consultant",
+            "Exp_SeniorConsultant_Company": "Virgin Mobile",
+            "Exp_SeniorConsultant_Desc": "Developed negotiation skills, active listening, and technical problem-solving for complex client issues under time pressure."
         }
     }
 }

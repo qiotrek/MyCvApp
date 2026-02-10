@@ -27,7 +27,7 @@ const MySkills: React.FC<MySkillsProps> = ({ texts }) => {
                             <Badge size="l" color="success" icon={HiCheck}>Tailwind</Badge>
                             <Badge size="l" color="success" icon={HiCheck}>JQuery</Badge>
                             <Badge size="l" color="warning" icon={HiMinusCircle}>FLUTTER</Badge>
-                            <Badge size="l" color="purple" icon={HiArrowCircleUp}>REACT</Badge>
+                            <Badge size="l" color="success" icon={HiCheck}>REACT</Badge>
                         </div>
                         <div className='m-auto w-[50%] flex justify-center items-center'>
                             <p className='text-5xl font-bold'>
