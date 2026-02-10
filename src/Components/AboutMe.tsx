@@ -50,6 +50,7 @@ const AboutMe: React.FC<AboutMeProps> = ({ texts }) => {
                         {/* KARTA 4: SPOTIFY */}
                         <Card className="h-[100%] w-[60%] bg-slate-600 dark:bg-slate-700 flex">
                             <iframe 
+                                title='myFavPlaylist'
                                 style={{ borderRadius: "12px" }} 
                                 src="https://open.spotify.com/embed/playlist/3BEkbK08Jm7kHQsS4icfI5?utm_source=generator"
                                 width="100%" 
