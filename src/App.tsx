@@ -10,29 +10,42 @@ import Contact from './Components/Contact';
 
 function App() {
   
-  useEffect(() => {
-    handleClickScroll("aboutMe");
-  }, []); 
-  
-  let texts:  Record<string, string> = {};
-  const lang = localStorage.getItem('lang')??"pl";
+  const [texts, setTexts] = useState<Record<string, string>>({});
   const [isMenuOpen, setMenuOpen] = useState(false);
   const [isOpen, setOpen] = useState(false);
-  const textsContent = localStorage.getItem('textsContent');
+  const lang = localStorage.getItem('lang') ?? "pl";
 
-  if (textsContent) {
-    texts= JSON.parse(textsContent);
-  } 
-  const handleClickScroll = (id:string) => {
+  useEffect(() => {
+    const loadTexts = () => {
+      const textsContent = localStorage.getItem('textsContent');
+      if (textsContent) {
+        setTexts(JSON.parse(textsContent));
+      }
+    };
+
+    loadTexts();
+
+    window.addEventListener('storage', loadTexts);
+    return () => window.removeEventListener('storage', loadTexts);
+  }, []);
+
+  useEffect(() => {
+    if (Object.keys(texts).length > 0) {
+      handleClickScroll("aboutMe");
+    }
+  }, [texts]);
+
+  const handleClickScroll = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ block:'center' });
+      element.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
+    setMenuOpen(false);
+    setOpen(false);
   };
+
   return (
-    // <div className="flex flex-col overflow-hidden bg-fixed" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bg.jpg)` }}>
     <div className="flex flex-col overflow-hidden bg-fixed bg-slate-800" >
-       {/* <nav className="max-h-18 bg-cover fixed flex w-screen gap-8 justify-between px-5 z-10" style={{ backgroundImage: `url(${process.env.PUBLIC_URL}/assets/bg.jpg)` }}> */}
        <nav className="max-h-18 bg-cover fixed flex w-screen gap-8 justify-between px-5 z-10 bg-inherit">
         <DownloadCVHook />
         {/* Burger menu */}
